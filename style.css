@@ -1,5 +1,9 @@
 /*globales*/
 
+/*recordar que parte de la configuracion actual del navegador 
+slider esta involucrado al la confiuracion del navegadro del header
+como por ejemplo el display flex*/
+
 body {
     font-family: arial;
     color: #fff;
@@ -41,7 +45,7 @@ header {
 }
 
 nav ul {
-    display: flex;
+    display: flex;/*afecta al slider*/
     
 }
 
@@ -56,10 +60,57 @@ main {
     
 }
 
+.slide_X {
+    width: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 5px solid red;
+    
+}
+
+.slide_X ul{
+    width: 600%;
+    animation: slider 18s infinite alternate;
+    animation-timing-function: linear;
+}
+
+.slide_X li{
+    width: 100%;
+}
+
+.slide_X img{
+    width: 100%;
+    
+}
+
+
 /*footer*/
 footer {
     background: rgb(18, 85, 219);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
+
+@keyframes slider {
+    0% {margin-left: 0;}
+    14% {margin-left: 0;}
+
+    16.6% {margin-left: -100%;}
+    30% {margin-left: -100%;}
+    
+    33.2% {margin-left: -200%;}
+    47% {margin-left: -200%;}
+
+    49.8% {margin-left: -300%;}
+    64% {margin-left: -300%;}
+
+    66.4% {margin-left: -400%;}
+    80% {margin-left: -400%;}
+
+    83% {margin-left: -500%;}
+    100% {margin-left: -500%;}
+}
+
+
